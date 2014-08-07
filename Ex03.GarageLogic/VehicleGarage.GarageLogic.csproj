@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C120684-2CBF-467D-9CF9-CCF6528DCF57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ex03.GarageLogic</RootNamespace>
+    <AssemblyName>Ex03.GarageLogic</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Components\ColorComponent.cs" />
+    <Compile Include="Components\DoorsComponent.cs" />
+    <Compile Include="Components\HazardousComponent.cs" />
+    <Compile Include="Components\LicenceComponent.cs" />
+    <Compile Include="Components\WeightComponent.cs" />
+    <Compile Include="Exceptions\EngineMismatchException.cs" />
+    <Compile Include="Exceptions\FuelMismatchException.cs" />
+    <Compile Include="Components\Component.cs" />
+    <Compile Include="Components\EngineCapacityComponent.cs" />
+    <Compile Include="Models\CarBuilder.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ElectricCarBuilder.cs" />
+    <Compile Include="Models\ElectricEngine.cs" />
+    <Compile Include="Exceptions\ValueOutOfRangeException.cs" />
+    <Compile Include="Models\ElectricMotorcycleBuilder.cs" />
+    <Compile Include="Models\FuelCarBuilder.cs" />
+    <Compile Include="Models\FuelEngine.cs" />
+    <Compile Include="Models\FuelMotorcycleBuilder.cs" />
+    <Compile Include="Models\GarageContainer.cs" />
+    <Compile Include="Models\GarageEntry.cs" />
+    <Compile Include="Models\Engine.cs" />
+    <Compile Include="Models\GasStation.cs" />
+    <Compile Include="Models\MotorcycleBuilder.cs" />
+    <Compile Include="Models\TruckBuilder.cs" />
+    <Compile Include="Enums\eColorType.cs" />
+    <Compile Include="Enums\eComponentType.cs" />
+    <Compile Include="Enums\eDoorsType.cs" />
+    <Compile Include="Enums\eEngineType.cs" />
+    <Compile Include="Enums\eFuelType.cs" />
+    <Compile Include="Enums\eLicenceType.cs" />
+    <Compile Include="Enums\eVehicleStatusType.cs" />
+    <Compile Include="Enums\eVehicleType.cs" />
+    <Compile Include="Utils\Converter.cs" />
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\VehicleBuilder.cs" />
+    <Compile Include="Models\Wheel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
