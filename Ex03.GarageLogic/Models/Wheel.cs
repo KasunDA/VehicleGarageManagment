@@ -66,7 +66,6 @@
 
         public Wheel(Wheel i_OtherWheel)
         {
-            // $G$ DSN-999 (-2) You should have used constructor overloading by calling 'this' to avoid code duplication.
             m_AirPressure = i_OtherWheel.AirPressure;
             r_Manufacturer = i_OtherWheel.Manufecturer;
             r_MaxPressure = i_OtherWheel.MaxPressure;
